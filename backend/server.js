@@ -502,7 +502,8 @@ app.post('/api/clear-data', async (req, res) => {
 // ============================================================
 // Start Server
 // ============================================================
-app.listen(PORT, HOST, () => {
+if (require.main === module) {
+    app.listen(PORT, HOST, () => {
     console.log('\n' + '='.repeat(55));
     console.log('  CyberShield AI — MERN Backend (Express)');
     console.log('='.repeat(55));
@@ -510,4 +511,7 @@ app.listen(PORT, HOST, () => {
     console.log(`[*] ML microservice expected at ${ML_SERVICE_URL}`);
     console.log('[*] MongoDB:', MONGO_URI);
     console.log('');
-});
+    });
+}
+
+module.exports = app;

@@ -14,8 +14,6 @@ import ToastContainer from './components/ToastContainer';
 import { ToastProvider } from './context/ToastContext';
 import './index.css';
 
-const API_BASE = 'http://localhost:5000/api';
-
 function App() {
   return (
     <ToastProvider>
