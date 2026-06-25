@@ -1,0 +1,16 @@
+{
+  "name": "cybershield-mern",
+  "version": "1.0.0",
+  "description": "CyberShield AI MERN Stack Implementation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "npm run dev --prefix backend",
+    "client": "npm run dev --prefix frontend",
+    "ml": ".venv\\Scripts\\python.exe backend/ml-service/app.py",
+    "dev": "concurrently -n API,UI,ML -c blue,cyan,magenta \"npm run server\" \"npm run client\" \"npm run ml\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

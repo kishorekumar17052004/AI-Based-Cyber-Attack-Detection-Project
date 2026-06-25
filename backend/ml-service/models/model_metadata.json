@@ -1,0 +1,78 @@
+{
+  "feature_names": [
+    "duration",
+    "fwd_packets_count",
+    "bwd_packets_count",
+    "fwd_total_payload_bytes",
+    "bwd_total_payload_bytes"
+  ],
+  "n_features": 5,
+  "classes": [
+    "Brute Force",
+    "DDoS"
+  ],
+  "n_classes": 2,
+  "model_type": "RandomForestClassifier",
+  "n_estimators": 100,
+  "metrics": {
+    "accuracy": 0.8996450467892869,
+    "f1_score": 0.946532757685473,
+    "classification_report": {
+      "Brute Force": {
+        "precision": 1.0,
+        "recall": 0.8995802389409105,
+        "f1-score": 0.9471358150603434,
+        "support": 3097.0
+      },
+      "DDoS": {
+        "precision": 0.006389776357827476,
+        "recall": 1.0,
+        "f1-score": 0.012698412698412698,
+        "support": 2.0
+      },
+      "accuracy": 0.8996450467892869,
+      "macro avg": {
+        "precision": 0.5031948881789138,
+        "recall": 0.9497901194704552,
+        "f1-score": 0.479917113879378,
+        "support": 3099.0
+      },
+      "weighted avg": {
+        "precision": 0.9993587542925833,
+        "recall": 0.8996450467892869,
+        "f1-score": 0.946532757685473,
+        "support": 3099.0
+      }
+    }
+  },
+  "attack_mapping": {
+    "BENIGN": "BENIGN",
+    "FTP-Patator": "Brute Force",
+    "SSH-Patator": "Brute Force",
+    "DoS slowloris": "DDoS",
+    "DoS Slowhttptest": "DDoS",
+    "DoS Hulk": "DDoS",
+    "DoS GoldenEye": "DDoS",
+    "Heartbleed": "DDoS",
+    "Web Attack \u0096 Brute Force": "Web Attack",
+    "Web Attack \u0096 XSS": "Web Attack",
+    "Web Attack \u0096 Sql Injection": "SQL Injection",
+    "Web Attack \u2013 Brute Force": "Web Attack",
+    "Web Attack \u2013 XSS": "Web Attack",
+    "Web Attack \u2013 Sql Injection": "SQL Injection",
+    "Infiltration": "Infiltration",
+    "Bot": "Bot",
+    "PortScan": "PortScan",
+    "DDoS": "DDoS"
+  },
+  "severity_mapping": {
+    "BENIGN": "Low",
+    "PortScan": "Medium",
+    "Brute Force": "High",
+    "DDoS": "High",
+    "Web Attack": "High",
+    "SQL Injection": "High",
+    "Bot": "Medium",
+    "Infiltration": "High"
+  }
+}
